@@ -1,16 +1,6 @@
-# Custom Discs v5.0 for Paper 1.21.7 / 1.21.8
+# FUCK Custom Discs | v5.0.1 for Paper and forks 1.21.7 / 1.21.8
+### Custom Discs with removed version and core checking
 
-> ### ⚠️⚠️⚠️ READ THIS SECTION CAREFULLY! ⚠️⚠️⚠️
-> ### This version introduces some breaking changes and *requires build 9 of PaperMC 1.21.7*.
-> ### Any earlier version of PaperMC is not guaranteed to function and new features may not function at all!
-> ### Please also note that this new release requires you to delete the ```config.yml``` and ```lang.yml``` files (or update them with the new options).
-> ### Without this being done, you could experience issues with this plugin.
-
-
-## NEW❗ : You can now ask for support on this Discord server ➡️ https://discord.gg/YJpqruvZ97 (but you can still use the "[Issues](https://github.com/Navoei/CustomDiscs/issues)" report section of GitHub)
-
-
-A Paper fork of henkelmax's Audio Player. Special thanks to Athar42 for maintaining this plugin. 
 - Play custom music discs, goat horns and player heads using the Simple Voice Chat API. (The voice chat mod is required on the client and server.)
 - Use ```/customdisc``` or ```/cd``` to view available commands.
 - Music files should go into ```plugins/CustomDiscs/musicdata/```
