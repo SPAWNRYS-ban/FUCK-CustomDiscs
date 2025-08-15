@@ -15,9 +15,6 @@ import me.Navoei.customdiscsplugin.language.Lang;
 
 import de.maxhenkel.voicechat.api.BukkitVoicechatService;
 
-import dev.jorel.commandapi.CommandAPI;
-import dev.jorel.commandapi.CommandAPIBukkitConfig;
-
 import org.bukkit.NamespacedKey;
 import org.bukkit.block.Jukebox;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -121,14 +118,6 @@ public final class CustomDiscs extends JavaPlugin {
         // RU: Сохранение экземпляра плагина
         // EN: Store the plugin instance
         CustomDiscs.instance = this;
-        
-        // RU: Инициализация CommandAPI с подробным выводом
-        // EN: Initialize CommandAPI with verbose output
-        CommandAPI.onLoad(new CommandAPIBukkitConfig(this).verboseOutput(true));
-        
-        // RU: Регистрация команды /customdiscs
-        // EN: Register the /customdiscs command
-        new CustomDiscCommand(this).register("customdiscs");
     }
     
     @Override
@@ -137,9 +126,9 @@ public final class CustomDiscs extends JavaPlugin {
         // EN: Initialize the logger
         pluginLogger = getLogger();
         
-        // RU: Включение CommandAPI
-        // EN: Enable CommandAPI
-        CommandAPI.onEnable();
+        // RU: Регистрация команды /customdiscs (перенесено из onLoad для совместимости)
+        // EN: Register the /customdiscs command (moved from onLoad for compatibility)
+        new CustomDiscCommand(this).register("customdiscs");
         
         // RU: Загрузка сервиса голосового чата
         // EN: Load the voice chat service
@@ -249,10 +238,6 @@ public final class CustomDiscs extends JavaPlugin {
     
     @Override
     public void onDisable() {
-        // RU: Отключение CommandAPI
-        // EN: Disable CommandAPI
-        CommandAPI.onDisable();
-        
         // RU: Отмена регистрации плагина голосового чата
         // EN: Unregister the voice chat plugin
         if (voicechatPlugin != null) {
