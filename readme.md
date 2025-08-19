@@ -1,4 +1,4 @@
-# FUCK Custom Discs | v5.0.1 for Paper and forks 1.21.7 / 1.21.8
+# FUCK Custom Discs | v5.1.1 for Paper and forks 1.21.7 / 1.21.8
 ### Custom Discs with removed version and core checking
 
 - Play custom music discs, goat horns and player heads using the Simple Voice Chat API. (The voice chat mod is required on the client and server.)
