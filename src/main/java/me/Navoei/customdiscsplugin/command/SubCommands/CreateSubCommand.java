@@ -163,6 +163,7 @@ public class CreateSubCommand extends CommandAPICommand {
             data.set(new NamespacedKey(this.plugin, "headlore"), PersistentDataType.STRING, serialized);
             player.getInventory().getItemInMainHand().setItemMeta(meta);
         }
+
         player.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize(Lang.PREFIX + Lang.CREATE_FILENAME.toString().replace("%filename%", filename)));
         player.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize(Lang.PREFIX + Lang.CREATE_CUSTOM_NAME.toString().replace("%custom_name%", song_name)));
         return 1;
